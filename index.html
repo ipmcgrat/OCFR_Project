@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Questrial&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+    <h1>
+      <center><img id="image" src="img/oco.jpg" height=150px><br><strong><p1>Oconee County Fire Rescue</p1></strong></center>
+    </h1>
+  </header>
+
+    <body style="background-color:lightgrey">
+
+    <nav class="navbar navbar-inverse">
+
+            <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="staff.html">Staff</a></li>
+				<li><a href="certifications.html">Certifications</a></li>
+
+            </ul>
+    </nav>
+
+<h2><strong><center>About OFCR</center></strong></h2>
+
+<br>
+<div>
+  <div class="row">
+    <div class="col-md-4 bg-1 text-center">
+      <br>
+      <a href="img/history.jpg" data-toggle="lightbox" data-title="Firehouse 1962" data-footer="Long history of saving lives">
+    <img id="image" src="img/history.jpg" class="img-circle" height=170px width=190px>
+</a>
+    <h3>History</h3>
+    <p>The Oconee County Community Fire Company, Inc. began service in 1962 as a Subscription Fire Service staffed by 38 volunteers with one Fire Station located in the City of Watkinsville. The Fire Service began with 230 subscribers at $12.00 per dwelling.
+
+Since 1962, the department has grown to seven fire stations and 175 members throughout the county. OCFR has one full-time Fire Chief, one full-time Deputy Chief, and two administrative assistants.
+
+Since 1997 all Firefighters are certified to the National NPQ Firefighter I level.</p>
+    </div>
+
+    <div class="col-md-4 bg-4 text-center">
+      <br>
+      <a href="img/mission.jpg" data-toggle="lightbox" data-title="Award Ceremony" data-footer="Recognition of rescue efforts">
+    <img id="image" src="img/mission.jpg" class="img-circle" height=170px width=190px>
+</a>
+    <h3>Mission</h3>
+    <p>The mission of Oconee County Fire Rescue is to save lives and property, to strive to provide the best emergency services possible, and to promote fire safety to make Oconee County a safer place to live.
+
+OCFR is responsible for planning, coordinating and implementing the fire prevention and suppression activities of seven volunteer fire stations in Oconee County. These seven fire stations are staffed with 175 volunteer firefighters and first responders who provide Fire and EMS support services to Oconee County.</p>
+    </div>
+
+    <div class="col-md-4 bg-3 text-center">
+      <br>
+      <a href="img/rescue.jpg" data-toggle="lightbox" data-title="Duty to Serve" data-footer="No fear in the face of danger">
+    <img id="image" src="img/rescue.jpg" class="img-circle" height=170px width=190px>
+</a>
+    <h3>Responsbilities</h3>
+    <p>Fire Rescue is responsible for:  responding to all fire and emergency calls in Oconee County and other surrounding counties on mutual aid calls; keeping updated records for ISO (Insurance Services Organization) while working to maintain a very good ISO rating of 5/9; coordinating joint training for all members at their stations; providing fire safety classes for schools and daycare centers; working with local and state agencies on investigations; recruiting new volunteer firefighters and coordinating volunteer firefighter training.</p>
+    </div>
+    </div>
+    </div>
+
+<script>
+    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                event.preventDefault();
+                $(this).ekkoLightbox();
+            });
+            </script>
+        
+</body>
+
+<hr id="horizontal">
+<footer>
+<center>
+VTIM and Co. | Phone: 812-368-994 | Scott's Tots Developers</center>
+</footer>
+</html>
