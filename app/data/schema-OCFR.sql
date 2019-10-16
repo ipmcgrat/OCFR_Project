@@ -26,13 +26,14 @@ INSERT INTO Enroll (name, certname) VALUES
 
 CREATE TABLE Certifications (
   certname VARCHAR(64) PRIMARY KEY,
+  certid INTEGER,
   agency VARCHAR(64),
   expyears INTEGER
 );
 
-INSERT INTO Certifications (certname, agency, expyears) VALUES
-("CPR for Healthcare Providers" ,"American Health Association","2"),
-("CPR for the Professional Rescurer","American Red Cross","2"),
-("Firefigher I" ,"Athens Technical College","3"),
-("Firefigher I" ,"Ivy Technical College","3"),
-("POST" ,"Gerogia POST Academy","5");
+INSERT INTO Certifications (certname, certid, agency, expyears) VALUES
+("CPR for Healthcare Providers",1,"American Health Association","2"),
+("CPR for the Professional Rescurer",2,"American Red Cross","2"),
+("Firefigher I" ,3,"Athens Technical College","3"),
+("Firefigher I" ,4,"Ivy Technical College","3"),
+("POST" ,5,"Gerogia POST Academy","5");
