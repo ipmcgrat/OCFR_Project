@@ -16,7 +16,7 @@ INSERT INTO Staff (name, radionumber, station, certification, expirationdate) VA
 
 CREATE TABLE Enroll(
   name VARCHAR(64),
-  certname VARCHAR(64),
+  cerid INTEGER,
   PRIMARY KEY (name,certname)
 );
 
