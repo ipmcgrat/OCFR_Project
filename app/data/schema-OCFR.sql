@@ -15,8 +15,9 @@ INSERT INTO Staff (name, radionumber, station, certification, expirationdate) VA
 ("Vishwesh Lamar", "1344", "North 1", "CPR Level 2", "2023-12-02");
 
 CREATE TABLE Enroll(
-  name VARCHAR(64) PRIMARY KEY,
-  certname VARCHAR(64) PRIMARY KEY,
+  name VARCHAR(64),
+  certname VARCHAR(64),
+  PRIMARY KEY (name,certname)
 );
 
 INSERT INTO Enroll (name, certname) VALUES
@@ -25,15 +26,15 @@ INSERT INTO Enroll (name, certname) VALUES
 ("Ian McGrath", "Firefighter I");
 
 CREATE TABLE Certifications (
-  certname VARCHAR(64) PRIMARY KEY,
-  certid INTEGER,
+  certid INTEGER PRIMARY KEY,
+  certname VARCHAR(64),
   agency VARCHAR(64),
   expyears INTEGER
 );
 
-INSERT INTO Certifications (certname, certid, agency, expyears) VALUES
-("CPR for Healthcare Providers",1,"American Health Association","2"),
-("CPR for the Professional Rescurer",2,"American Red Cross","2"),
-("Firefigher I" ,3,"Athens Technical College","3"),
-("Firefigher I" ,4,"Ivy Technical College","3"),
-("POST" ,5,"Gerogia POST Academy","5");
+INSERT INTO Certifications (certid, certname, agency, expyears) VALUES
+(1,"CPR for Healthcare Providers","American Health Association","2"),
+(2,"CPR for the Professional Rescurer","American Red Cross","2"),
+(3,"Firefigher I","Athens Technical College","3"),
+(4,"Firefigher I","Ivy Technical College","3"),
+(5,"POST","Gerogia POST Academy","5");
