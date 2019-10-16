@@ -15,8 +15,8 @@ INSERT INTO Staff (name, radionumber, station, certification, expirationdate) VA
 ("Vishwesh Lamar", "1344", "North 1", "CPR Level 2", "2023-12-02");
 
 CREATE TABLE Enroll(
-  name VARCHAR(64) FOREIGN KEY,
-  certname VARCHAR(64) FOREIGN KEY,
+  name VARCHAR(64) PRIMARY KEY,
+  certname VARCHAR(64) PRIMARY KEY,
 );
 
 INSERT INTO Enroll (name, certname) VALUES
