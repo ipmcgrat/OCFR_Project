@@ -48,58 +48,13 @@
         </tr>
 </thead>
     <tbody>
-            <tr>
-                    <td>Taylor McManus</td>
-                    <td>1213</td>
-                    <td>North 2</td>
-                    <td>Firefighter 1</td>
-                    <td>10-03-2021</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
+      <tr v-for="s in staff" @click="handleRowClick(p)">
+              <td>{{ s.name }}</td>
+              <td>{{ s.radionumber }}</td>
+              <td>{{ s.station }}</td>
+              <td>{{ s.certification }}</td>
+              <td>{{ s.expirationdate }}</td>
             </tr>
-
-            <tr>
-                    <td>Ian McGrath</td>
-                    <td>1133</td>
-                    <td>West 3</td>
-                    <td>Fire Fighter 2</td>
-                    <td>11-03-2021</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-            <tr>
-                    <td>Morgan Morrow</td>
-                    <td>1234</td>
-                    <td>East 2</td>
-                    <td>Fire Fighter 1</td>
-                    <td>12-03-2021</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-            <tr>
-                    <td>Vishwesh Lamar</td>
-                    <td>1344</td>
-                    <td>North 1</td>
-                    <td>CPR Level 2</td>
-                    <td>12-02-2023</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-            <tr>
-                    <td>Finale McAllister</td>
-                    <td>1325</td>
-                    <td>West 3</td>
-                    <td>CPR Level 2</td>
-                    <td>12-02-2023</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-
-
     </tbody>
 </table>
 </div>
@@ -136,37 +91,33 @@
 <div class="container-fluid text-center bg-2">
 <br>
 
-<form action="" method="post" >
+<div id="staffRecordsApp">
+<form @submit.prevent="handleSubmit">
         <div class="form-group">
-
             <label for="title">Fire Fighter Name:</label>
-            <input type="text" class="form-control" name="title" id="title" placeholder="Name">
+            <input type="text" class="form-control" name="title" id="title" placeholder="Name" v-model="recordStaff.name">
         </div>
 
         <div class="form-group">
             <label for="author">Radio Number:</label>
-            <input type="text" name="author" class="form-control" id="author" placeholder="#">
+            <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="recordStaff.radionumber">
         </div>
 
         <div class="form-group">
             <label for="year">Station Code:</label>
-            <input type="date" name="year" class="form-control" id="year">
+            <input type="date" name="year" class="form-control" id="year" v-model="recordStaff.station">
         </div>
 
         <div class="form-group">
             <label for="publisher">Certifications:</label>
-            <input type="text" name="publisher" class="form-control" id="publisher">
+            <input type="text" name="publisher" class="form-control" id="publisher" v-model="recordStaff.certification">
         </div>
 
         <div class="form-group">
             <label for="page">Expiration Date:</label>
-            <input type="number" name="page" class="form-control" id="page" placeholder="">
+            <input type="number" name="page" class="form-control" id="page" placeholder="" v-model="recordStaff.expirationdate">
         </div>
 
-        <div class="form-group">
-            <label for="msrp">Additional Information:</label>
-            <input type="number" name="msrp" min="0.01" step="0.01" class="form-control" id="msrp" placeholder="">
-            </div>
 
             <br>
             <center><input type="submit" class="btn btn-danger">
