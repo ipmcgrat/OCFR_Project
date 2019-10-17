@@ -35,6 +35,7 @@
 
 <h2><strong><center>OCFR Staff</center></strong></h2>
 <div class="container-fluid text-center bg-2">
+<div id="staffRecordsApp">
 <table class="table table-condensed"><br>
 <thead>
         <tr>
@@ -56,7 +57,6 @@
             </tr>
     </tbody>
 </table>
-</div>
 <br>
 <div>
   <div class="row">
@@ -89,8 +89,6 @@
 <h2><strong><center>Add Staff Member to OCFR</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <br>
-
-<div id="staffRecordsApp">
 <form @submit.prevent="handleSubmit">
         <div class="form-group">
             <label for="title">Fire Fighter Name:</label>
@@ -122,7 +120,9 @@
             <center><input type="submit" class="btn btn-danger">
             </center><br>
         </form>
-</div>
+      </div>
+    </div>
+  </div>
 <script src="js/staff.app.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
