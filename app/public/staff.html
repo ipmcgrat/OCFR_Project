@@ -39,21 +39,20 @@
 <table class="table table-condensed"><br>
 <thead>
         <tr>
-            <th class="text-center">Fire Fighter</th>
             <th class="text-center">Radio Number</th>
+            <th class="text-center">First Name</th>
+            <th class="text-center">Last Name</th>
             <th class="text-center">Station</th>
-            <th class="text-center">Certifications</th>
-            <th class="text-center">Expiration</th>
-            <th class="text-center">Actions</th>
+            <th class="text-center">Phone</th>
         </tr>
 </thead>
     <tbody>
       <tr v-for="s in staff" @click="handleRowClick(p)">
-              <td>{{ s.name }}</td>
               <td>{{ s.radionumber }}</td>
+              <td>{{ s.firstname }}</td>
+              <td>{{ s.lastname }}</td>
               <td>{{ s.station }}</td>
-              <td>{{ s.certification }}</td>
-              <td>{{ s.expirationdate }}</td>
+              <td>{{ s.phone }}</td>
             </tr>
     </tbody>
 </table>
@@ -91,28 +90,26 @@
 <br>
 <form @submit.prevent="handleSubmit">
         <div class="form-group">
-            <label for="title">Fire Fighter Name:</label>
-            <input type="text" class="form-control" name="title" id="title" placeholder="Name" v-model="recordStaff.name">
-        </div>
-
-        <div class="form-group">
             <label for="author">Radio Number:</label>
             <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="recordStaff.radionumber">
+        </div>
+        <div class="form-group">
+            <label for="title">First Name:</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="First Name" v-model="recordStaff.firstname">
+        </div>
+        <div class="form-group">
+            <label for="title">Last Name:</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Last Name" v-model="recordStaff.lastname">
         </div>
 
         <div class="form-group">
             <label for="year">Station Code:</label>
-            <input type="date" name="year" class="form-control" id="year" v-model="recordStaff.station">
+            <input type="text" name="year" class="form-control" id="year" placeholder= "Station #" v-model="recordStaff.station">
         </div>
 
         <div class="form-group">
-            <label for="publisher">Certifications:</label>
-            <input type="text" name="publisher" class="form-control" id="publisher" v-model="recordStaff.certification">
-        </div>
-
-        <div class="form-group">
-            <label for="page">Expiration Date:</label>
-            <input type="number" name="page" class="form-control" id="page" placeholder="" v-model="recordStaff.expirationdate">
+            <label for="publisher">Phone:</label>
+            <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Phone #" v-model="recordStaff.phone">
         </div>
 
 
