@@ -35,59 +35,27 @@
 
 <h2><strong><center>OCFR Certifications</center></strong></h2>
 <div class="container-fluid text-center bg-2">
+<div id="certsRecordsApp">
 <table class="table table-condensed">
 <br>
 <thead>
         <tr>
-            <th class="text-center">Certification</th>
+            <th class="text-center">Certification ID</th>
+            <th class="text-center">Certification Name</th>
             <th class="text-center">Certifying Agency</th>
             <th class="text-center">Default Exp. Period</th>
 	    <th class="text-center">Actions</th>
         </tr>
 </thead>
     <tbody>
-            <tr>
-                    <td>CPR for Healthcare Providers</td>
-                    <td>American Health Association</td>
-                    <td>2 Years</td>
+            <tr v-for="c in certifications" @click="handleRowClick(p)">
+                    <td>C{{ c.certid }}</td>
+                    <td>C{{ c.certname }}</td>
+                    <td>C{{ c.agency }}</td>
+                    <td>C{{ c.expyears }}</td>
                     <td><button type="button" class="btn btn-primary btn-sm">Update</button>
                     <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
             </tr>
-
-            <tr>
-                    <td>CPR for the Professional Rescurer</td>
-                    <td>American Red Cross</td>
-                    <td>2 Years</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-            <tr>
-                    <td>Figherfighter 1</td>
-                    <td>Athens Technical College</td>
-                    <td>3 Years</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-            <tr>
-                    <td>Firefighter 1</td>
-                    <td>Ivy Technical College</td>
-                    <td>3 Years</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-            <tr>
-                    <td>POST</td>
-                    <td>Gerogia POST Academy</td>
-                    <td>5 Years</td>
-                    <td><button type="button" class="btn btn-primary btn-sm">Update</button>
-                    <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
-            </tr>
-
-
-
     </tbody>
 </table>
 </div>
@@ -146,12 +114,10 @@
             </center><br>
         </form>
 </div>
-<script>
-    $(document).on('click', '[data-toggle="lightbox"]', function(event) {
-                event.preventDefault();
-                $(this).ekkoLightbox();
-            });
-            </script>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="js/certs.app.js"></script>
 </body>
 
 <hr id="horizontal">
