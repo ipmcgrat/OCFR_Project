@@ -35,6 +35,9 @@ var staffRecordsApp = new Vue({
         station: '',
         certification: '',
         expirationdate: ''
+      },
+      handleRowCLick(row) {
+        
       }
     },
 
