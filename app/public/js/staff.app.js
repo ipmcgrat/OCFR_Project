@@ -30,14 +30,14 @@ var staffRecordsApp = new Vue({
     },
     handleReset() {
       this.recordStaff = {
-        name: '',
         radionumber: '',
+        firstname: '',
+        lastname: '',
         station: '',
-        certification: '',
-        expirationdate: ''
+        phone: ''
       },
       handleRowCLick(row) {
-        
+
       }
     },
 
