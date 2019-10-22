@@ -20,7 +20,7 @@ CREATE TABLE Enroll(
   PRIMARY KEY (radionumber,certid)
 );
 
-INSERT INTO Enroll (name, certid) VALUES
+INSERT INTO Enroll (radionumber, certid) VALUES
 ("1213", 1),
 ("1213", 3),
 ("1133", 4);
