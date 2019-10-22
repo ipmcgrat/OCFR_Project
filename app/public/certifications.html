@@ -49,10 +49,10 @@
 </thead>
     <tbody>
             <tr v-for="c in certifications" @click="handleRowClick(p)">
-                    <td>C{{ c.certid }}</td>
-                    <td>C{{ c.certname }}</td>
-                    <td>C{{ c.agency }}</td>
-                    <td>C{{ c.expyears }}</td>
+                    <td>{{ c.certid }}</td>
+                    <td>{{ c.certname }}</td>
+                    <td>{{ c.agency }}</td>
+                    <td>{{ c.expyears }}</td>
                     <td><button type="button" class="btn btn-primary btn-sm">Update</button>
                     <button type="button" class="btn btn-primary btn-sm">Delete</button></td>
             </tr>
