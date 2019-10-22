@@ -17,7 +17,7 @@ $stmt->execute([
   $_POST['firstname'],
   $_POST['lastname'],
   $_POST['station'],
-  $_POST['phone'],
+  $_POST['phone']
 ]);
 
 
