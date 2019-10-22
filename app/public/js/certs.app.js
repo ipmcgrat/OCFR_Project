@@ -33,9 +33,6 @@ var certsRecordsApp = new Vue({
         certname: '',
         agency: '',
         expyears: ''
-      },
-      handleRowCLick(row) {
-
       }
     },
 
