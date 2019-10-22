@@ -36,8 +36,7 @@
 <h2><strong><center>OCFR Certifications</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <div id="certsRecordsApp">
-<table class="table table-condensed">
-<br>
+<table class="table table-condensed"><br>
 <thead>
         <tr>
             <th class="text-center">Certification ID</th>
@@ -58,7 +57,6 @@
             </tr>
     </tbody>
 </table>
-</div>
 <br>
 <div>
   <div class="row">
@@ -86,8 +84,7 @@
     <h3>CPR Certification</h3>
     </div>
     </div>
-    </div>
-
+  </div>
 <h2><strong><center>Add Certification</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <br>
@@ -96,23 +93,24 @@
         <div class="form-group">
 
             <label for="title">Certification Name:</label>
-            <input type="text" class="form-control" name="title" id="title" placeholder="Name">
+            <input type="text" class="form-control" name="title" id="title" placeholder="Name" v-model="recordCert.certname">
         </div>
 
         <div class="form-group">
             <label for="author">Certifying Agency:</label>
-            <input type="text" name="author" class="form-control" id="author" placeholder="Agency">
+            <input type="text" name="author" class="form-control" id="author" placeholder="Agency" v-model="recordCert.agency">
         </div>
 
         <div class="form-group">
             <label for="year">Expiration Duration:</label>
-            <input type="number" name="year" class="form-control" id="year" placeholder="Years">
+            <input type="number" name="year" class="form-control" id="year" placeholder="Years" v-model="recordCert.expyears">
         </div>
 
             <br>
             <center><input type="submit" class="btn btn-danger">
             </center><br>
         </form>
+</div>
 </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
