@@ -8,16 +8,16 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 $stmt = $db->prepare(
   'INSERT INTO Staff
-    (name, radionumber, station, certification, expirationdate)
+    (radionumber, firstname, lastname, station, phone)
   VALUES (?, ?, ?, ?, ?)'
 );
 
 $stmt->execute([
-  $_POST['name'],
   $_POST['radionumber'],
+  $_POST['firstname'],
+  $_POST['lastname'],
   $_POST['station'],
-  $_POST['certification'],
-  $_POST['expirationdate']
+  $_POST['phone'],
 ]);
 
 

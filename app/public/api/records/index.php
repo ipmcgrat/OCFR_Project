@@ -7,7 +7,7 @@ $db = DbConnection::getConnection();
 if (isset($_GET['guid'])) {
   $stmt = $db->prepare(
     'SELECT * FROM Staff
-    WHERE name = ?'
+    WHERE radionumber = ?'
   );
   $stmt->execute([$_GET['guid']]);
 } else {
