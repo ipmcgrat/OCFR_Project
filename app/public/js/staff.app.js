@@ -36,9 +36,9 @@ var staffRecordsApp = new Vue({
         station: '',
         phone: ''
       },
-      handleRowCLick(row) {
+      //handleRowCLick(row) {
 
-      }
+      //}
     },
 
   }, // end methods
