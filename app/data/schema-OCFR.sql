@@ -10,7 +10,7 @@ CREATE TABLE Staff (
 
 INSERT INTO Staff (radionumber, firstname, lastname, station, phone) VALUES
 ("1213","Taylor", "McManus",  "North 2", "111-222-3333"),
-("1133","Ian", "McGrath" "West 3", "444-555-6666"),
+("1133","Ian", "McGrath", "West 3", "444-555-6666"),
 ("1234","Morgan", "Morrow",  "East 2", "777-888-9999"),
 ("1344","Vishwesh", "Lamar",  "North 1", "111-123-1234");
 
