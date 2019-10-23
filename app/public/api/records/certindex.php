@@ -15,7 +15,7 @@ if (isset($_GET['guid'])) {
   $stmt->execute();
 }
 
-$staff = $stmt->fetchAll();
+$certifications = $stmt->fetchAll();
 
 // Step 3: Convert to JSON
 $json = json_encode($certifications, JSON_PRETTY_PRINT);
