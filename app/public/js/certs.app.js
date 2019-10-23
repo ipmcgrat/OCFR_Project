@@ -19,7 +19,7 @@ var certsRecordsApp = new Vue({
         }
       })
       .then( response => response.json() )
-      .then( json => {certsRecordsApp.staff.push(json[0])})
+      .then( json => {certsRecordsApp.certifications.push(json[0])})
       .catch( err => {
         console.error('RECORD POST ERROR:');
         console.error(err);
