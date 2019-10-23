@@ -7,7 +7,7 @@ var staffRecordsApp = new Vue({
   },
   methods: {
     fetchStaff() {
-      fetch('api/records/')
+      fetch('api/records/index.php')
       .then(response => response.json())
       .then(json => { staffRecordsApp.staff = json })
     },
