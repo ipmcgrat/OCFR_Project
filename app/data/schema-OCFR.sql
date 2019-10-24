@@ -33,9 +33,9 @@ CREATE TABLE Certifications (
   expyears INTEGER
 );
 
-INSERT INTO Certifications (certid, certname, agency, expyears) VALUES
-(1,"CPR for Healthcare Providers","American Health Association","2"),
-(2,"CPR for the Professional Rescurer","American Red Cross","2"),
-(3,"Firefigher I","Athens Technical College","3"),
-(4,"Firefigher I","Ivy Technical College","3"),
-(5,"POST","Gerogia POST Academy","5");
+INSERT INTO Certifications (certname, agency, expyears) VALUES
+("CPR for Healthcare Providers","American Health Association","2"),
+("CPR for the Professional Rescurer","American Red Cross","2"),
+("Firefigher I","Athens Technical College","3"),
+("Firefigher I","Ivy Technical College","3"),
+("POST","Gerogia POST Academy","5");
