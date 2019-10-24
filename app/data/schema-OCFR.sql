@@ -27,7 +27,7 @@ INSERT INTO Enroll (radionumber, certid) VALUES
 ("1133", 4);
 
 CREATE TABLE Certifications (
-  certid INTEGER PRIMARY KEY,
+  certid INTEGER PRIMARY KEY AUTO_INCREMENT,
   certname VARCHAR(64),
   agency VARCHAR(64),
   expyears INTEGER

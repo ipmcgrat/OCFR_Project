@@ -8,11 +8,12 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 $stmt = $db->prepare(
   'INSERT INTO Certifications
-    (certname, agency, expyears)
-  VALUES (?, ?, ?)'
+    (certid, certname, agency, expyears)
+  VALUES (?, ?, ?, ?)'
 );
 
 $stmt->execute([
+  $_POST['certid'],
   $_POST['certname'],
   $_POST['agency'],
   $_POST['expyears']
