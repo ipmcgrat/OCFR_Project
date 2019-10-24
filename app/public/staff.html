@@ -45,6 +45,7 @@
             <th class="text-center">Station</th>
             <th class="text-center">Phone</th>
             <th class="text-center">Email</th>
+            <th class="text-center">Actions</th>
         </tr>
 </thead>
     <tbody>
@@ -55,6 +56,7 @@
               <td>{{ s.station }}</td>
               <td>{{ s.phone }}</td>
               <td>{{ s.email }}</td>
+              <td><form><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></form></td>
             </tr>
     </tbody>
 </table>

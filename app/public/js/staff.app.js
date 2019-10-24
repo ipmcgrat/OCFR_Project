@@ -39,6 +39,25 @@ var staffRecordsApp = new Vue({
       }
     },
 
+    handleDelete(sid) {
+      fetch('api/records/staffdelete.php',{
+        method: 'POST',
+        body: JSON.stringify({"radionumber":sid}),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then(function(response){
+        staffRecordsApp.staff = staffRecordsApp.staff.filter(
+          function(el) {return el.radionumber != sid}
+        );
+      })
+        .catch( err =>{
+          console.error('STAFF DELETE ERROR: ');
+          console.error(err);
+        });
+
+
   }, // end methods
   created() {
     this.handleReset();
