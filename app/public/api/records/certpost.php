@@ -9,7 +9,7 @@ $db = DbConnection::getConnection();
 $stmt = $db->prepare(
   'INSERT INTO Certifications
     (certname, agency, expyears)
-  VALUES (?, ?, ?, ?)'
+  VALUES (?, ?, ?)'
 );
 
 $stmt->execute([
