@@ -26,7 +26,7 @@ var staffRecordsApp = new Vue({
         console.error(err);
       });
 
-      this.handleReset();
+
     },
     handleReset() {
       this.recordStaff = {
@@ -56,8 +56,8 @@ var staffRecordsApp = new Vue({
           console.error('STAFF DELETE ERROR: ');
           console.error(err);
         });
-
-
+this.handleReset();
+},
   }, // end methods
   created() {
     this.handleReset();
