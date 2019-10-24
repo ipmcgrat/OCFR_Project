@@ -34,7 +34,8 @@ var staffRecordsApp = new Vue({
         firstname: '',
         lastname: '',
         station: '',
-        phone: ''
+        phone: '',
+        email: ''
       }
     },
 

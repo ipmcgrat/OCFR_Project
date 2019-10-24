@@ -5,14 +5,15 @@ CREATE TABLE Staff (
   firstname VARCHAR(64),
   lastname VARCHAR(64),
   station VARCHAR(64),
-  phone VARCHAR(64)
+  phone VARCHAR(64),
+  email VARCHAR(64)
 );
 
-INSERT INTO Staff (radionumber, firstname, lastname, station, phone) VALUES
-("1213","Taylor", "McManus",  "North 2", "111-222-3333"),
-("1133","Ian", "McGrath", "West 3", "444-555-6666"),
-("1234","Morgan", "Morrow",  "East 2", "777-888-9999"),
-("1344","Vishwesh", "Lamar",  "North 1", "111-123-1234");
+INSERT INTO Staff (radionumber, firstname, lastname, station, phone, email) VALUES
+("1213","Taylor", "McManus",  "North 2", "111-222-3333","taylor@ocfr.com"),
+("1133","Ian", "McGrath", "West 3", "444-555-6666","ian@ocfr.com"),
+("1234","Morgan", "Morrow",  "East 2", "777-888-9999","morgan@ocfr.com"),
+("1344","Vishwesh", "Lamar",  "North 1", "111-123-1234","vishwesh@ocfr.com");
 
 CREATE TABLE Enroll(
   radionumber VARCHAR(64),
