@@ -25,7 +25,7 @@ var certsRecordsApp = new Vue({
         console.error(err);
       });
 
-      this.handleReset();
+
     },
     handleReset() {
       this.recordCert = {
@@ -35,6 +35,28 @@ var certsRecordsApp = new Vue({
         expyears: ''
       }
     },
+
+
+    handleDelete(cid) {
+      fetch('api/records/certdelete.php',{
+        method: 'POST',
+        body: JSON.stringify({"certid":cid}),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then(function(response){
+        certsRecordsApp.certifications = certsRecordsApp.certifications.filter(
+          function(el) {return el.certid != cid}
+        );
+      })
+        .catch( err =>{
+          console.error('CERTIFICATIONS DELETE ERROR: ');
+          console.error(err);
+        });
+
+        this.handleReset();
+      },
 
   }, // end methods
   created() {
