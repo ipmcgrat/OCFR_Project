@@ -5,5 +5,5 @@
 // Step 1: Get a datase connection from our help class
 $db = DbConnection::getConnection();
 
-
-UPDATE Staff SET radionumber =?, lastname = "?", );
+// Step 2: Create & run the query
+$stmt = $db->prepare(UPDATE Staff SET radionumber =?, lastname = "?", );
