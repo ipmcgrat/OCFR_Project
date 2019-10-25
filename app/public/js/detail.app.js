@@ -9,6 +9,8 @@ var detailRecordsApp = new Vue({
       fetch('api/records/memcert.php')
       .then(response => response.json())
       .then(json => { detailRecordsApp.details = json })
+
+
     },
 
     handleReset() {
@@ -20,9 +22,9 @@ var detailRecordsApp = new Vue({
         certname: '',
         expyears: ''
       }
-    },
+    }
 
-    this.handleReset();
+this.handleReset();
 
 
   }, // end methods
