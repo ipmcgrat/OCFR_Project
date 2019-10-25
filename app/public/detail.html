@@ -73,9 +73,46 @@
 </div>
 </div>
 
+
+<div id="certsRecordsApp">
+<select v-model="filter1.cname">
+  <option v-for="c in certifications" :value="filter1.cname">{{c.certname}}</option>
+  </select>
+  </div>
+
+<div class="container-fluid text-center bg-2">
+<div id="detailRecordsApp">
+
+<table class="table table-condensed"><br>
+<thead>
+        <tr>
+            <th class="text-center">Radio Number</th>
+            <th class="text-center">First Name</th>
+            <th class="text-center">Last Name</th>
+            <th class="text-center">Certification ID</th>
+            <th class="text-center">Certification Name</th>
+            <th class="text-center">Default Exp. Period</th>
+        </tr>
+</thead>
+    <tbody>
+      <tr v-for="d in details" v-if="filter1.cname=='' || d.lastname==filter1.cname">
+              <td>{{ d.certid }}</td>
+              <td>{{ d.certname }}</td>
+              <td>{{ d.radionumber }}</td>
+              <td>{{ d.firstname }}</td>
+              <td>{{ d.lastname }}</td>
+              <td>{{ d.expyears }}</td>
+            </tr>
+    </tbody>
+</table>
+<br>
+</div>
+</div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="js/staff.app.js"></script>
+<script src="js/certs.app.js"></script>
 <script src="js/detail.app.js"></script>
 
 </body>

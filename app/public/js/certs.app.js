@@ -3,6 +3,10 @@ var certsRecordsApp = new Vue({
   data: {
     certifications: [],
       recordCert: {},
+
+      filter: {
+        cname:''
+      }
   },
   methods: {
     fetchCerts() {
