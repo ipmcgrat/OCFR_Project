@@ -58,6 +58,7 @@
               <td>{{ s.phone }}</td>
               <td>{{ s.email }}</td>
               <td><form><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></form></td>
+              <td><form><input type='button' value='Update' @click='handleUpdate(s.radionumber)'></input></form></td>
             </tr>
     </tbody>
 </table>
@@ -123,7 +124,8 @@
 
 
             <br>
-            <center><input type="submit" class="btn btn-danger">
+            <center><input type="submit" value = "Add New Member" class="btn btn-danger">
+              <input type="submit" value = "Update Existing Member" class="btn btn-danger">
             </center><br>
         </form>
       </div>
