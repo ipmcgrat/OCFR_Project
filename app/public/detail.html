@@ -34,39 +34,39 @@
             </ul>
     </nav>
 
-<h2><strong><center>OCFR Staff</center></strong></h2>
+<h2><strong><center>OCFR Staff and Certifications</center></strong></h2>
 
 
 <div class="container-fluid text-center bg-2">
-<div id="staffRecordsApp">
+<div id="detailRecordsApp">
 
-  <div class="filter">
-    <select  v-model = "filter.lname">
-      <option value="">(all)</option>
-      <option>hande</option>
-      </select>
-      </div>
+<div class="filter"
+<select v-for="d in details" v-model="filter.lname">
+  <option value="">(all)</option>
+  <option>{{d.lastname}}</option>
+  </select>
+  </div>
+
+
 <table class="table table-condensed"><br>
 <thead>
         <tr>
             <th class="text-center">Radio Number</th>
             <th class="text-center">First Name</th>
             <th class="text-center">Last Name</th>
-            <th class="text-center">Station</th>
-            <th class="text-center">Phone</th>
-            <th class="text-center">Email</th>
-            <th class="text-center">Actions</th>
+            <th class="text-center">Certification ID</th>
+            <th class="text-center">Certification Name</th>
+            <th class="text-center">Default Exp. Period</th>
         </tr>
 </thead>
     <tbody>
-      <tr v-for="s in staff" @click="handleRowClick(s)" v-if="filter.lname=='' || s.lastname = filter.lname">
-              <td>{{ s.radionumber }}</td>
-              <td>{{ s.firstname }}</td>
-              <td>{{ s.lastname }}</td>
-              <td>{{ s.station }}</td>
-              <td>{{ s.phone }}</td>
-              <td>{{ s.email }}</td>
-              <td><form><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></form></td>
+      <tr v-for="d in details" v-if="filter.lname=='' || d.lastname==filter.lname">
+              <td>{{ d.radionumber }}</td>
+              <td>{{ d.firstname }}</td>
+              <td>{{ d.lastname }}</td>
+              <td>{{ d.certid }}</td>
+              <td>{{ d.certname }}</td>
+              <td>{{ d.expyears }}</td>
             </tr>
     </tbody>
 </table>
@@ -76,7 +76,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-<script src="js/staff.app.js"></script>
+<script src="js/detail.app.js"></script>
 </body>
 
 
