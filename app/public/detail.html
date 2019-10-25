@@ -41,7 +41,7 @@
 <div id="staffRecordsApp">
 
   <div class="filter">
-    <select  v-model = "filter.lastname">
+    <select  v-model = "filter.lname">
       <option value="">(all)</option>
       <option>hande</option>
       </select>
@@ -59,7 +59,7 @@
         </tr>
 </thead>
     <tbody>
-      <tr v-for="s in staff" @click="handleRowClick(p)" v-if="filter.lastname=='' || s.lastname = filter.lastname">
+      <tr v-for="s in staff" @click="handleRowClick(p)" v-if="filter.lname=='' || s.lastname = filter.lname">
               <td>{{ s.radionumber }}</td>
               <td>{{ s.firstname }}</td>
               <td>{{ s.lastname }}</td>

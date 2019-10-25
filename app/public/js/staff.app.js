@@ -4,7 +4,7 @@ var staffRecordsApp = new Vue({
     staff: [],
     recordStaff: {},
     filter: {
-      lastname:''
+      lname:''
     }
 
   },
