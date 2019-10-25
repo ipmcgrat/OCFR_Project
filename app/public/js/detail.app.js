@@ -3,9 +3,11 @@ var detailRecordsApp = new Vue({
   data: {
     details: [],
       recordDetails: {},
-      filter:{
+
+      filter: {
         lname:''
       }
+
   },
   methods: {
     fetchDetails() {
