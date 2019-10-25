@@ -58,6 +58,7 @@
               <td>{{ s.phone }}</td>
               <td>{{ s.email }}</td>
               <td><form><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></form></td>
+              <td><form><input type='button' value='Update' @click='handleUpdate(s.radionumber)'></input></form></td>
             </tr>
     </tbody>
 </table>
@@ -120,54 +121,19 @@
             <label for="publisher">Email:</label>
             <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="recordStaff.email">
         </div>
-      </form>
+
+
             <br>
             <center><input type="submit" value = "Add New Member" class="btn btn-danger">
+              <input type="submit" value = "Update Existing Member" class="btn btn-danger">
             </center><br>
+        </form>
       </div>
     </div>
-    <!--<div id="staffUpdateApp">
-    <h2><strong><center>Update Existing Member</center></strong></h2>
-    <div class="container-fluid text-center bg-2">
-    <br>
-    <form @submit.prevent="handleSubmit">
-            <div class="form-group">
-                <label for="author">Radio Number:</label>
-                <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="editStaff.radionumber">
-            </div>
-            <div class="form-group">
-                <label for="title">First Name:</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="First Name" v-model="editStaff.firstname">
-            </div>
-            <div class="form-group">
-                <label for="title">Last Name:</label>
-                <input type="text" class="form-control" name="title" id="title" placeholder="Last Name" v-model="editStaff.lastname">
-            </div>
-
-            <div class="form-group">
-                <label for="year">Station Code:</label>
-                <input type="text" name="year" class="form-control" id="year" placeholder= "Station #" v-model="editStaff.station">
-            </div>
-
-            <div class="form-group">
-                <label for="publisher">Phone:</label>
-                <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Phone #" v-model="editStaff.phone">
-            </div>
-            <div class="form-group">
-                <label for="publisher">Email:</label>
-                <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="editStaff.email">
-            </div>
-          </form>
-                <br>
-                <center><input type="submit" value = "Update Member" class="btn btn-danger">
-                </center><br>
-          </div>
-        </div>-->
   </div>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="js/staff.app.js"></script>
-<!--<script src="js/staffUpdate.app.js"></script>-->
 </body>
 
 
