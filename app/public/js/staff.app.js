@@ -3,6 +3,9 @@ var staffRecordsApp = new Vue({
   data: {
     staff: [],
     recordStaff: {},
+    filter: {
+      lastname:''
+    }
 
   },
   methods: {
