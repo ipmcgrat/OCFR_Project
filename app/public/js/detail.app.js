@@ -10,7 +10,7 @@ var detailRecordsApp = new Vue({
       .then(response => response.json())
       .then(json => { detailRecordsApp.details = json })
 
-
+this.handleReset();
     },
 
     handleReset() {
@@ -22,8 +22,8 @@ var detailRecordsApp = new Vue({
         certname: '',
         expyears: ''
       }
-      this.handleReset();
-    }
+
+    },
 
 
 },
