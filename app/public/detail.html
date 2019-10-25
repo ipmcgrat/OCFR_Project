@@ -29,6 +29,7 @@
 				<li><a href="index.html">Home</a></li>
 				<li><a href="staff.html">Staff</a></li>
 				<li><a href="certifications.html">Certifications</a></li>
+      	<li><a href="detail.html">Staff Details</a></li>
 
             </ul>
     </nav>
@@ -40,7 +41,7 @@
 <div id="staffRecordsApp">
 
   <div class="filter">
-    <select v-model = "filter.lastname">
+    <select v-for="s in staff" v-model = "filter.lastname">
       <option value="">(all)</option>
       <option>{{s.lastname}}</option>
       </select>
