@@ -61,6 +61,10 @@ var staffRecordsApp = new Vue({
         });
 this.handleReset();
 },
+
+handleRowClick(staff){
+  staffRecordsApp.staff = staff;
+}
   }, // end methods
   created() {
     this.handleReset();

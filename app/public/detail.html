@@ -59,7 +59,7 @@
         </tr>
 </thead>
     <tbody>
-      <tr v-for="s in staff" @click="handleRowClick(p)" v-if="filter.lname=='' || s.lastname = filter.lname">
+      <tr v-for="s in staff" @click="handleRowClick(s)" v-if="filter.lname=='' || s.lastname = filter.lname">
               <td>{{ s.radionumber }}</td>
               <td>{{ s.firstname }}</td>
               <td>{{ s.lastname }}</td>
