@@ -4,7 +4,7 @@ var certsRecordsApp = new Vue({
     certifications: [],
       recordCert: {},
 
-      filter: {
+      filter1: {
         cname:''
       }
   },
