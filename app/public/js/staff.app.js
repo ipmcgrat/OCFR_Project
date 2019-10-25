@@ -64,7 +64,7 @@ this.handleReset();
 },
 
 handleRowClick(staff){
-  staffUpdateApp.staff = staff;
+  staffRecordsApp.staff = staff;
 }
   }, // end methods
   created() {

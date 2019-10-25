@@ -1,5 +1,5 @@
 var staffUpdateApp = new Vue({
-  el: '#staffRecordsApp',
+  el: '#staffUpdateApp',
   data: {
     staff: [],
     recordStaff: {},
@@ -19,7 +19,7 @@ var staffUpdateApp = new Vue({
     handleUpdate(sid) {
       fetch('api/records/editstaff.php', {
         method: 'POST',
-        body: JSON.stringify(this.editStaff),
+        body: JSON.stringify({"radionumber":sid}),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
