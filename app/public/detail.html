@@ -41,9 +41,9 @@
 <div id="detailRecordsApp">
 
 <div>
-<b-dropdown v-for="d in details" v-model="filter.lname">
-  <b-dropdown-item>{{d.lastname}}</b-dropdown-item>
-  </b-dropdown>
+<select v-for="d in details" v-model="filter.lname">
+  <option>{{d.lastname}}</option>
+  </select>
   </div>
 
 
