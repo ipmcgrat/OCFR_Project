@@ -60,11 +60,13 @@ var staffRecordsApp = new Vue({
           console.error('STAFF DELETE ERROR: ');
           console.error(err);
         });
-this.handleReset();
+
 },
 
 handleRowClick(staff){
-  staffRecordsApp.staff = staff;
+  staffUpdateApp.staff = staff;
+
+  this.handleReset();
 }
   }, // end methods
   created() {
