@@ -40,7 +40,7 @@
 <div class="container-fluid text-center bg-2">
 <div id="detailRecordsApp">
 
-<div>
+<div v-for="d in details">
 <select v-model="filter.lname">
   <option>{{d.lastname}}</option>
   </select>
