@@ -41,8 +41,8 @@
 <div id="detailRecordsApp">
 
 <div>
-<select v-model="filter.lname" required>
-  <option v-for="d in details" :value="d.radionumber">{{d.lastname}}</option>
+<select v-model="filter.lname">
+  <option v-for="d in details">{{d.lastname}}</option>
   </select>
   </div>
 
