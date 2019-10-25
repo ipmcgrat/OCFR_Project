@@ -1,4 +1,4 @@
-var staffRecordsApp = new Vue({
+var staffUpdateApp = new Vue({
   el: '#staffRecordsApp',
   data: {
     staff: [],
@@ -15,10 +15,11 @@ var staffRecordsApp = new Vue({
       .then(response => response.json())
       .then(json => { staffRecordsApp.staff = json })
     },
-    handleSubmit(event) {
-      fetch('api/records/post.php', {
+
+    handleUpdate(sid) {
+      fetch('api/records/editstaff.php', {
         method: 'POST',
-        body: JSON.stringify(this.recordStaff),
+        body: JSON.stringify(this.editStaff),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
@@ -29,7 +30,6 @@ var staffRecordsApp = new Vue({
         console.error('RECORD POST ERROR:');
         console.error(err);
       });
-
     },
 
     handleReset() {
@@ -43,28 +43,8 @@ var staffRecordsApp = new Vue({
       }
     },
 
-    handleDelete(sid) {
-      fetch('api/records/staffdelete.php',{
-        method: 'POST',
-        body: JSON.stringify({"radionumber":sid}),
-        headers: {
-          "Content-Type": "application/json; charset=utf-8"
-        }
-      })
-      .then(function(response){
-        staffRecordsApp.staff = staffRecordsApp.staff.filter(
-          function(el) {return el.radionumber != sid}
-        );
-      })
-        .catch( err =>{
-          console.error('STAFF DELETE ERROR: ');
-          console.error(err);
-        });
-this.handleReset();
-},
-
 handleRowClick(staff){
-  staffUpdateApp.staff = staff;
+  .staff = staff;
 }
   }, // end methods
   created() {
