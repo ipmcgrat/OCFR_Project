@@ -40,9 +40,9 @@
 <div class="container-fluid text-center bg-2">
 <div id="detailRecordsApp">
 
-<div >
+<div id="staffRecordsApp" >
 <select v-model="filter.lname">
-  <option v-for="d in details">{{d.lastname}}</option>
+  <option v-for="s in staff">{{s.lastname}}</option>
   </select>
   </div>
 
@@ -76,6 +76,7 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="js/detail.app.js"></script>
+<script src="js/staff.app.js"></script>
 </body>
 
 
