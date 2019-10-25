@@ -22,12 +22,12 @@ var detailRecordsApp = new Vue({
         certname: '',
         expyears: ''
       }
+      this.handleReset();
     }
 
-this.handleReset();
 
+},
 
-  }, // end methods
   created() {
     this.handleReset();
     this.fetchDetails();
