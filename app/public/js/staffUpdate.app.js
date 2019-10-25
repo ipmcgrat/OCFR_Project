@@ -24,13 +24,10 @@ var staffUpdateApp = new Vue({
           "Content-Type": "application/json; charset=utf-8"
         }
       })
-      .then( response => response.json() )
-      .then( json => {staffRecordsApp.staff.push(json[0])})
-      .catch( err => {
-        console.error('RECORD POST ERROR:');
-        console.error(err);
-      });
-    },
+
+    this.fetchStaff();
+    this.handleReset();
+  },
 
     handleReset() {
       this.recordStaff = {
@@ -42,10 +39,6 @@ var staffUpdateApp = new Vue({
         email: ''
       }
     },
-
-handleRowClick(staff){
-  .staff = staff;
-}
   }, // end methods
   created() {
     this.handleReset();
