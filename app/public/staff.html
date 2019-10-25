@@ -121,10 +121,39 @@
             <label for="publisher">Email:</label>
             <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="recordStaff.email">
         </div>
-
-
+      </form>
             <br>
             <center><input type="submit" value = "Add New Member" class="btn btn-danger">
+              <h2><strong><center>Edit Staff Member</center></strong></h2>
+              <div class="container-fluid text-center bg-2">
+              <br>
+              <form @submit.prevent="handleUpdate">
+                      <div class="form-group">
+                          <label for="author">Radio Number:</label>
+                          <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="editStaff.radionumber">
+                      </div>
+                      <div class="form-group">
+                          <label for="title">First Name:</label>
+                          <input type="text" class="form-control" name="title" id="title" placeholder="First Name" v-model="editStaff.firstname">
+                      </div>
+                      <div class="form-group">
+                          <label for="title">Last Name:</label>
+                          <input type="text" class="form-control" name="title" id="title" placeholder="Last Name" v-model="editStaff.lastname">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="year">Station Code:</label>
+                          <input type="text" name="year" class="form-control" id="year" placeholder= "Station #" v-model="editStaff.station">
+                      </div>
+
+                      <div class="form-group">
+                          <label for="publisher">Phone:</label>
+                          <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Phone #" v-model="editStaff.phone">
+                      </div>
+                      <div class="form-group">
+                          <label for="publisher">Email:</label>
+                          <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="editStaff.email">
+                      </div>
               <input type="submit" value = "Update Existing Member" class="btn btn-danger">
             </center><br>
         </form>

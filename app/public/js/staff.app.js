@@ -3,6 +3,7 @@ var staffRecordsApp = new Vue({
   data: {
     staff: [],
     recordStaff: {},
+    editStaff: {},
     filter: {
       lname:''
     }
@@ -29,8 +30,24 @@ var staffRecordsApp = new Vue({
         console.error(err);
       });
 
-
     },
+
+    handleUpdate(event) {
+      fetch('api/records/editstaff.php', {
+        method: 'POST',
+        body: JSON.stringify(this.editStaff),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      .then( response => response.json() )
+      .then( json => {staffRecordsApp.staff.push(json[0])})
+      .catch( err => {
+        console.error('RECORD POST ERROR:');
+        console.error(err);
+      });
+    },
+
     handleReset() {
       this.recordStaff = {
         radionumber: '',
