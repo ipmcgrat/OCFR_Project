@@ -3,6 +3,9 @@ var detailRecordsApp = new Vue({
   data: {
     details: [],
       recordDetails: {},
+      filter:{
+        lname:''
+      }
   },
   methods: {
     fetchDetails() {
@@ -24,7 +27,6 @@ this.handleReset();
       }
 
     },
-
 
 },
 
