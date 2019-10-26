@@ -13,7 +13,8 @@ if (isset($_GET['guid'])) {
   );
   $stmt->execute([$_GET['guid']]);
 } else {
-  $stmt = $db->prepare('SELECT s.radionumber, s.firstname, s.lastname, c.certid, c.certname, c.expyears
+  $stmt = $db->prepare('SELECT s.radionumber, s.firstname, s.lastname, c.certid, c.certname, c.expyears,
+    s.email, s.station
   FROM Staff s, Enroll e, Certifications c
   WHERE e.radionumber=s.radionumber AND e.certid=c.certid');
   $stmt->execute();

@@ -78,6 +78,7 @@ var staffRecordsApp = new Vue({
 
 handleRowClick(staff){
   staffRecordsApp.staff = staff;
+  console.log(staff);
 
 }
   }, // end methods

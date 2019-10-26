@@ -31,6 +31,7 @@
       				<li><a href="certifications.html">Certifications</a></li>
               <li><a href="staffdetail.html">Staff Details</a></li>
               <li><a href="certdetail.html">Certification Details</a></li>
+              <li><a href="reportstation.html">Station Report</a></li>
 
             </ul>
     </nav>
@@ -51,7 +52,7 @@
         </tr>
 </thead>
     <tbody>
-      <tr v-for="s in staff" @click="handleRowClick(p)">
+      <tr v-for="s in staff" @click="handleRowClick(s)">
               <td>{{ s.radionumber }}</td>
               <td>{{ s.firstname }}</td>
               <td>{{ s.lastname }}</td>

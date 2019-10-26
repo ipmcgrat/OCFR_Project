@@ -18,13 +18,16 @@ INSERT INTO Staff (radionumber, firstname, lastname, station, phone, email) VALU
 CREATE TABLE Enroll(
   radionumber VARCHAR(64),
   certid INTEGER,
-  PRIMARY KEY (radionumber,certid)
+  status VARCHAR(64),
+  PRIMARY KEY (radionumber,certid),
+  FOREIGN KEY (radionumber) REFERENCES Staff(radionumber),
+  FOREIGN KEY (certid) REFERENCES Certifications(certid)
 );
 
-INSERT INTO Enroll (radionumber, certid) VALUES
-("1213", 1),
-("1213", 3),
-("1133", 4);
+INSERT INTO Enroll (radionumber, certid, status) VALUES
+("1213", 1, "Active"),
+("1213", 3, "Active"),
+("1133", 4, "Expired");
 
 CREATE TABLE Certifications (
   certid INTEGER PRIMARY KEY AUTO_INCREMENT,
