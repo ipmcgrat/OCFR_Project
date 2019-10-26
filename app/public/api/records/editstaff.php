@@ -7,7 +7,7 @@ $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
 $stmt = $db->prepare('UPDATE Staff SET radionumber =?, firstname = ?, lastname
-= ?, station = ? phone = ? email = ?');
+= ?, station = ?, phone = ?, email = ? WHERE radionumber=? ');
 
 $stmt->execute([
   $_POST['radionumber'],
