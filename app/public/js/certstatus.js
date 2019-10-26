@@ -4,7 +4,10 @@ var certStatusApp = new Vue({
     details: [],
       recordDetails: {},
 
-      }
+
+            filter1: {
+              cname:''
+            }
 
   },
   methods: {
