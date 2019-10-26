@@ -6,7 +6,8 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 if (isset($_GET['guid'])) {
   $stmt = $db->prepare(
-    'SELECT s.radionumber, s.firstname, s.lastname, c.certid, c.certname, c.expyears
+    'SELECT s.radionumber, s.firstname, s.lastname, c.certid, c.certname, c.expyears,
+    s.email, s.station
     FROM Staff s, Enroll e, Certifications c
     WHERE e.radionumber=s.radionumber AND e.certid=c.certid'
   );

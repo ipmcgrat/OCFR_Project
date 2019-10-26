@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Certification Detail</title>
+        <title>Report</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
@@ -35,16 +35,16 @@
             </ul>
     </nav>
 
-<h2><strong><center>OCFR Certifications</center></strong></h2>
+<h2><strong><center></center></strong></h2>
 
-<div id="certsRecordsApp">
-<select v-model="filter1.cname">
-  <option v-for="c in certifications" :value="filter1.cname">{{c.certname}}</option>
+<div id="staffRecordsApp">
+<select v-model="filter1.sname">
+  <option v-for="s in staff" :value="filter1.sname">{{c.certname}}</option>
   </select>
   </div>
 
 <div class="container-fluid text-center bg-2">
-<div id="certDetailApp">
+<div id="stationReportApp">
 
 <table class="table table-condensed"><br>
 <thead>
@@ -59,13 +59,12 @@
         </tr>
 </thead>
     <tbody>
-      <tr v-for="d in details" v-if="filter1.cname=='' || d.certname==filter1.cname">
-              <td>{{ d.certid }}</td>
-              <td>{{ d.certname }}</td>
+      <tr v-for="d in details" v-if="filter1.sname=='' || d.station==filter1.sname">
+              <td>{{ d.station }}</td>
               <td>{{ d.radionumber }}</td>
               <td>{{ d.firstname }}</td>
               <td>{{ d.lastname }}</td>
-              <td>{{ d.expyears }}</td>
+              <td>{{ d.email }}</td>
             </tr>
     </tbody>
 </table>
@@ -79,6 +78,7 @@
 <script src="js/certs.app.js"></script>
 <script src="js/detail.app.js"></script>
 <script src="js/certdetail.js"></script>
+<script src="js/stationreport.js"></script>
 
 </body>
 
