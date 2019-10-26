@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Staff</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js.map"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js.map"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Carter+One|Questrial&display=swap" rel="stylesheet">
+    </head>
+
+    <header>
+    <h1>
+      <center><img id="image" src="img/oco.jpg" height=150px><br><strong><p1>Oconee County Fire Rescue</p1></strong></center>
+    </h1>
+  </header>
+
+    <body style="background-color:lightgrey">
+
+    <nav class="navbar navbar-inverse">
+
+            <ul class="nav navbar-nav">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="staff.html">Staff</a></li>
+				<li><a href="certifications.html">Certifications</a></li>
+      	<li><a href="detail.html">Staff Details</a></li>
+
+            </ul>
+    </nav>
+
+<h2><strong><center>OCFR Certifications</center></strong></h2>
+
+<div id="certsRecordsApp">
+<select v-model="filter1.cname">
+  <option v-for="c in certifications" :value="filter1.cname">{{c.certname}}</option>
+  </select>
+  </div>
+
+<div class="container-fluid text-center bg-2">
+<div id="detailRecordsApp">
+
+<table class="table table-condensed"><br>
+<thead>
+        <tr>
+
+            <th class="text-center">Certification ID</th>
+            <th class="text-center">Certification Name</th>
+            <th class="text-center">Radio Number</th>
+            <th class="text-center">First Name</th>
+            <th class="text-center">Last Name</th>
+            <th class="text-center">Default Exp. Period</th>
+        </tr>
+</thead>
+    <tbody>
+      <tr v-for="d in details" v-if="filter1.cname=='' || d.certname==filter1.cname">
+              <td>{{ d.certid }}</td>
+              <td>{{ d.certname }}</td>
+              <td>{{ d.radionumber }}</td>
+              <td>{{ d.firstname }}</td>
+              <td>{{ d.lastname }}</td>
+              <td>{{ d.expyears }}</td>
+            </tr>
+    </tbody>
+</table>
+<br>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="js/staff.app.js"></script>
+<script src="js/certs.app.js"></script>
+<script src="js/detail.app.js"></script>
+
+</body>
+
+
+<hr id="horizontal">
+<footer>
+<center>
+VTIM and Co. | Phone: 812-368-994 | Scott's Tots Developers</center>
+</footer>
+</html>
