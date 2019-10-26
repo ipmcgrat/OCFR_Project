@@ -100,12 +100,9 @@
             </center><br>
         </form>
       </div>
-    </div>
-  </div>
       <h2><strong><center>Update Existing Member</center></strong></h2>
       <div class="container-fluid text-center bg-2">
       <br>
-      <div id="staffUpdateApp">
       <form @submit.prevent="handleUpate">
               <div class="form-group">
                   <label for="author">Radio Number:</label>
@@ -134,13 +131,15 @@
                   <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="editStaff.email">
               </div>
 
+
                   <br>
                   <center>
                     <input type="submit" value = "Update Existing Member" class="btn btn-danger">
                   </center><br>
               </form>
             </div>
-            </div>
+    </div>
+  </div>
 
   <div>
     <div class="row">
@@ -172,8 +171,6 @@
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="js/staff.app.js"></script>
-<script src="js/triage.app.js"></script>
-<script src="js/waiting.app.js"></script>
 </body>
 
 
