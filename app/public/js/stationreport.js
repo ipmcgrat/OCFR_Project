@@ -1,11 +1,11 @@
-var certDetailApp = new Vue({
-  el: '#certDetailApp',
+var stationReportApp = new Vue({
+  el: '#stationReportApp',
   data: {
     details: [],
       recordDetails: {},
 
       filter1: {
-        cname:''
+        sname:''
       }
 
   },
@@ -13,19 +13,18 @@ var certDetailApp = new Vue({
     fetchDetails() {
       fetch('api/records/memcert.php')
       .then(response => response.json())
-      .then(json => { certDetailApp.details = json })
+      .then(json => { stationReportApp.details = json })
 
 this.handleReset();
     },
 
     handleReset() {
       this.recordDetails = {
-        certid: '',
-        certname: '',
+        station: '',
         radionumber: '',
-        firstname:'',
+        firstname: '',
         lastname: '',
-        expyears: ''
+        email: ''
       }
 
     },

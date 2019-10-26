@@ -6,6 +6,9 @@ var staffRecordsApp = new Vue({
     editStaff: {},
     filter: {
       lname:''
+    },
+    filter1: {
+      sname: ''
     }
 
   },
@@ -74,7 +77,7 @@ var staffRecordsApp = new Vue({
   },
 
 handleRowClick(staff){
-  staffUpdateApp.staff = staff;
+  staffRecordsApp.staff = staff;
 
 }
   }, // end methods
