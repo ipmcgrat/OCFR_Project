@@ -61,6 +61,7 @@ var staffRecordsApp = new Vue({
           console.error(err);
         });
 
+        this.handeReset();
 },
 
     handleUpdate(sid) {
