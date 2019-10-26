@@ -60,8 +60,6 @@ var staffRecordsApp = new Vue({
           console.error('STAFF DELETE ERROR: ');
           console.error(err);
         });
-
-        this.handeReset();
 },
 
     handleUpdate(sid) {
@@ -78,7 +76,6 @@ var staffRecordsApp = new Vue({
 handleRowClick(staff){
   staffRecordsApp.staff = staff;
 
-  this.handleReset();
 }
   }, // end methods
   created() {
