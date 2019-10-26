@@ -72,3 +72,16 @@ h3{
 p1{
   font-family: 'Carter One', cursive;
 }
+
+form {
+  float: left;
+}
+
+form#updateForm {
+  clear: right;
+  margin-right: 20px;
+}
+
+p#submit{
+  clear: both;
+}

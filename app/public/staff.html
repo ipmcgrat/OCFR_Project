@@ -103,7 +103,7 @@
       <h2><strong><center>Update Existing Member</center></strong></h2>
       <div class="container-fluid text-center bg-2">
       <br>
-      <form @submit.prevent="handleUpate">
+      <form id="updateForm" @submit.prevent="handleUpate">
               <div class="form-group">
                   <label for="author">Radio Number:</label>
                   <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="editStaff.radionumber">
@@ -133,9 +133,9 @@
 
 
                   <br>
-                  <center>
+                  <center><p id='submit'>
                     <input type="submit" value = "Update Existing Member" class="btn btn-danger">
-                  </center><br>
+                  </p></center><br>
               </form>
             </div>
     </div>
