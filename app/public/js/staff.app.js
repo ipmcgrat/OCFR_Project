@@ -33,6 +33,7 @@ var staffRecordsApp = new Vue({
         console.error(err);
       });
 
+      this.handleReset();
     },
 
     handleReset() {
@@ -72,15 +73,26 @@ var staffRecordsApp = new Vue({
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
-      });
-
+      })
+      .then(function(response){
+        staffEditApp.staff = staffEditApp.staff.filter(
+          function(el) {return el.radionumber != sid}
+        );
+      })
+        .catch( err =>{
+          console.error('STAFF DELETE ERROR: ');
+          console.error(err);
+        });
+this.handleReset();
   },
 
 handleRowClick(staff){
   staffRecordsApp.staff = staff;
   console.log(staff);
 
+  this.handleReset();
 }
+
   }, // end methods
   created() {
     this.handleReset();

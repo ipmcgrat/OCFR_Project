@@ -2,7 +2,6 @@ var staffEditApp = new Vue({
   el: '#staffEditApp',
   data: {
     staff: {}
-
   },
   methods: {
     handleSubmit() {
