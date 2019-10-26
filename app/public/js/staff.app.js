@@ -73,10 +73,10 @@ var staffRecordsApp = new Vue({
 
   },
 
-handleRowClick(staff){
-  staffRecordsApp.staff = staff;
+//handleRowClick(staff){
+  //staffRecordsApp.staff = staff;
 
-}
+//}
   }, // end methods
   created() {
     this.handleReset();
