@@ -11,7 +11,7 @@ var stationReportApp = new Vue({
   },
   methods: {
     fetchDetails() {
-      fetch('api/records/memcert.php')
+      fetch('api/records/index.php')
       .then(response => response.json())
       .then(json => { stationReportApp.details = json })
 
