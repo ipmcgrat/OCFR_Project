@@ -2,6 +2,7 @@ var certsRecordsApp = new Vue({
   el: '#certsRecordsApp',
   data: {
     certifications: [],
+      editCert: {},
       recordCert: {},
 
       filter1: {
@@ -27,10 +28,23 @@ var certsRecordsApp = new Vue({
       .catch( err => {
         console.error('RECORD POST ERROR:');
         console.error(err);
-      });
-
+      })
 
     },
+
+    handleEdit(event) {
+      fetch('api/records/editcert.php', {
+        method: 'POST',
+        body: JSON.stringify(this.editcert),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      this.fetchCerts();
+
+      this.handleReset();
+    },
+
     handleReset() {
       this.recordCert = {
         certid: '',
@@ -61,6 +75,10 @@ var certsRecordsApp = new Vue({
 
         this.handleReset();
       },
+
+      handleRowClick(editCert){
+        certsRecordsApp.editCert = editCert;
+      }
 
   }, // end methods
   created() {

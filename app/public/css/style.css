@@ -72,3 +72,7 @@ h3{
 p1{
   font-family: 'Carter One', cursive;
 }
+
+.table-hover tbody tr:hover td {
+  color: black;
+}

@@ -31,7 +31,7 @@
       				<li><a href="certifications.html">Certifications</a></li>
               <li><a href="staffdetail.html">Staff Details</a></li>
               <li><a href="certdetail.html">Certification Details</a></li>
-             <li><a href="reportstatus.html">Certification Status Report</a></li>
+              <li><a href="reportstatus.html">Certification Status Report</a></li>
               <li><a href="reportstation.html">Station Report</a></li>
 
             </ul>
@@ -40,7 +40,7 @@
 <h2><strong><center>OCFR Staff</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <div id="staffRecordsApp">
-<table class="table table-condensed"><br>
+<table class="table table-condensed table-hover"><br>
 <thead>
         <tr>
             <th class="text-center">Radio Number</th>
@@ -60,12 +60,13 @@
               <td>{{ s.station }}</td>
               <td>{{ s.phone }}</td>
               <td>{{ s.email }}</td>
-              <td><form><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></form></td>
+              <td><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></td>
             </tr>
     </tbody>
 </table>
 <br>
-
+<div class=row>
+<div class=col-md-6>
 <h2><strong><center>Add Staff Member to OCFR</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <br>
@@ -103,36 +104,37 @@
             </center><br>
         </form>
       </div>
+    </div>
+    <div class=col-md-6>
       <h2><strong><center>Update Existing Member</center></strong></h2>
       <div class="container-fluid text-center bg-2">
       <br>
-      <div id="staffEditApp">
-      <form @submit.prevent="handleUpate">
+      <form @submit.prevent="handleEdit">
               <div class="form-group">
                   <label for="author">Radio Number:</label>
-                  <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="staff.radionumber">
+                  <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="editstaff.radionumber">
               </div>
               <div class="form-group">
                   <label for="title">First Name:</label>
-                  <input type="text" class="form-control" name="title" id="title" placeholder="First Name" v-model="staff.firstname">
+                  <input type="text" class="form-control" name="title" id="title" placeholder="First Name" v-model="editstaff.firstname">
               </div>
               <div class="form-group">
                   <label for="title">Last Name:</label>
-                  <input type="text" class="form-control" name="title" id="title" placeholder="Last Name" v-model="staff.lastname">
+                  <input type="text" class="form-control" name="title" id="title" placeholder="Last Name" v-model="editstaff.lastname">
               </div>
 
               <div class="form-group">
                   <label for="year">Station Code:</label>
-                  <input type="text" name="year" class="form-control" id="year" placeholder= "Station #" v-model="staff.station">
+                  <input type="text" name="year" class="form-control" id="year" placeholder= "Station #" v-model="editstaff.station">
               </div>
 
               <div class="form-group">
                   <label for="publisher">Phone:</label>
-                  <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Phone #" v-model="staff.phone">
+                  <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Phone #" v-model="editstaff.phone">
               </div>
               <div class="form-group">
                   <label for="publisher">Email:</label>
-                  <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="staff.email">
+                  <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Email Address" v-model="editstaff.email">
               </div>
 
                   <br>
@@ -140,11 +142,11 @@
                     <input type="submit" value = "Update Existing Member" class="btn btn-danger">
                   </center><br>
               </form>
-
             </div>
             </div>
     </div>
   </div>
+</div>
 
   <div>
     <div class="row">
