@@ -1,19 +1,14 @@
-var detailRecordsApp = new Vue({
-  el: '#detailRecordsApp',
+var assignCertApp = new Vue({
+  el: '#assignCertApp',
   data: {
-    details: [],
-      recordDetails: {},
-
-      filter: {
-        lname:''
-      }
-
+    assign: [],
+      recordDetails: {}
   },
   methods: {
     fetchDetails() {
-      fetch('api/records/memcert.php')
+      fetch('api/records/assigncert.php')
       .then(response => response.json())
-      .then(json => { detailRecordsApp.details = json })
+      .then(json => { detailRecordsApp.assign = json })
 
 this.handleReset();
     },
@@ -25,7 +20,7 @@ this.handleReset();
         lastname: '',
         certid:'',
         certname: '',
-        status: ''
+        expyears: ''
       }
 
     },
