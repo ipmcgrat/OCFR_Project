@@ -59,10 +59,6 @@ var assignCertApp = new Vue({
         });
 
         this.handleReset();
-},
-
-handleRowClick(recordDetails){
-  assignCertApp.recordDetails = recordDetails;
 }
 
   }, // end methods
