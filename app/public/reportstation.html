@@ -39,14 +39,20 @@
 
 <h2><strong><center></center></strong></h2>
 
-<div id="staffRecordsApp">
-<select v-model="filter1.sname">
-  <option v-for="s in staff" :value="filter1.sname">{{s.station}}</option>
-  </select>
-  </div>
-
 <div class="container-fluid text-center bg-2">
 <div id="stationReportApp">
+
+<div class="filter">
+<select v-model="filter.sname">
+  <option value="">(all)</option>
+  <option>West 5</option>
+  <option>North 2</option>
+  <option>East 2</option>
+  <option>North 1</option>
+  </select>
+</div>
+
+
 
 <table class="table table-condensed"><br>
 <thead>
@@ -60,7 +66,7 @@
         </tr>
 </thead>
     <tbody>
-      <tr v-for="d in details" v-if="filter1.sname=='' || d.station==filter1.sname">
+      <tr v-for="d in details" v-if="filter.sname=='' || d.station==filter.sname">
               <td>{{ d.station }}</td>
               <td>{{ d.radionumber }}</td>
               <td>{{ d.firstname }}</td>

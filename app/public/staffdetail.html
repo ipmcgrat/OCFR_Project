@@ -39,16 +39,20 @@
 
 <h2><strong><center>Certifications by Status</center></strong></h2>
 
-
-
-<div id="staffRecordsApp">
-<select v-model="filter.lname">
-  <option v-for="s in staff" :value="filter.lname">{{s.lastname}}</option>
-  </select>
-</div>
-
 <div class="container-fluid text-center bg-2">
 <div id="detailRecordsApp">
+
+  <div class="filter">
+  <select v-model="filter.lname">
+    <option value="">(all)</option>
+    <option>McManus</option>
+    <option>McGrath</option>
+    <option>Morrow</option>
+    <option>Lamar</option>
+    </select>
+  </div>
+
+
 
 <table class="table table-condensed"><br>
 <thead>

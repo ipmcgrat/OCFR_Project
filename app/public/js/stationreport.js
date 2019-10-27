@@ -4,7 +4,7 @@ var stationReportApp = new Vue({
     details: [],
       recordDetails: {},
 
-      filter1: {
+      filter: {
         sname:''
       }
 
