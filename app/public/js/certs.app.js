@@ -35,7 +35,7 @@ var certsRecordsApp = new Vue({
     handleEdit(event) {
       fetch('api/records/editcert.php', {
         method: 'POST',
-        body: JSON.stringify(this.editcert),
+        body: JSON.stringify(this.editCert),
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         }
