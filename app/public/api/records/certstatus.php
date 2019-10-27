@@ -6,13 +6,13 @@ $db = DbConnection::getConnection();
 // Step 2: Create & run the query
 if (isset($_GET['guid'])) {
   $stmt = $db->prepare(
-    'SELECT s.radionumber, s.firstname, s.lastname, c.certid, c.certname, e.status
+    'SELECT e.radionumber, s.firstname, s.lastname, e.certid, c.certname, e.status
     FROM Staff s, Enroll e, Certifications c
     WHERE e.radionumber=s.radionumber AND e.certid=c.certid AND e.status = 'Expired''
   );
   $stmt->execute([$_GET['guid']]);
 } else {
-  $stmt = $db->prepare('SELECT s.radionumber, s.firstname, s.lastname, c.certid, c.certname, e.status
+  $stmt = $db->prepare('SELECT e.radionumber, s.firstname, s.lastname, e.certid, c.certname, e.status
   FROM Staff s, Enroll e, Certifications c
   WHERE e.radionumber=s.radionumber AND e.certid=c.certid AND e.status = 'Expired'');
   $stmt->execute();
