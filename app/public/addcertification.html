@@ -97,7 +97,6 @@ function exportTableToCSV(filename) {
             <th class="text-center">Certification ID</th>
             <th class="text-center">Certification Name</th>
             <th class="text-center">Status</th>
-            <th class="text-center">Actions</th>
         </tr>
 </thead>
     <tbody>
@@ -108,7 +107,6 @@ function exportTableToCSV(filename) {
               <td>{{ a.certid }}</td>
               <td>{{ a.certname }}</td>
               <td>{{ a.status }}</td>
-              <td><input type='button' value='Delete' @click='handleDelete(s.radionumber)'></input></td>
             </tr>
     </tbody>
 </table>
