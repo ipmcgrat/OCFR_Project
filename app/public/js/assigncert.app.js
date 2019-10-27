@@ -61,8 +61,8 @@ var assignCertApp = new Vue({
         this.handleReset();
 },
 
-handleRowClick(editassigned){
-  assignCertApp.editassigned = editassigned;
+handleRowClick(recordDetails){
+  assignCertApp.recordDetails = recordDetails;
 }
 
   }, // end methods
