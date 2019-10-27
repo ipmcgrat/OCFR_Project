@@ -34,7 +34,7 @@
               <li><a href="certdetail.html">Certification Details</a></li>
               <li><a href="reportstatus.html">Certification Status Report</a></li>
               <li><a href="reportstation.html">Station Report</a></li>
-    
+
 
             </ul>
     </nav>
@@ -51,6 +51,7 @@
             <th class="text-center">Certification ID</th>
             <th class="text-center">Certification Name</th>
             <th class="text-center">Status</th>
+            <th class="text-center">Actions</th>
         </tr>
 </thead>
     <tbody>
@@ -75,22 +76,8 @@
             <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="assign.radionumber">
         </div>
         <div class="form-group">
-            <label for="title">First Name:</label>
-            <input type="text" class="form-control" name="title" id="title" placeholder="First Name" v-model="assign.firstname">
-        </div>
-        <div class="form-group">
-            <label for="title">Last Name:</label>
-            <input type="text" class="form-control" name="title" id="title" placeholder="Last Name" v-model="assign.lastname">
-        </div>
-
-        <div class="form-group">
             <label for="year">Certification ID:</label>
             <input type="text" name="year" class="form-control" id="year" placeholder= "#" v-model="assign.certid">
-        </div>
-
-        <div class="form-group">
-            <label for="publisher">Certification Name:</label>
-            <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Name" v-model="assign.certname">
         </div>
         <div class="form-group">
             <label for="publisher">Status:</label>
