@@ -73,15 +73,15 @@
 <form @submit.prevent="handleSubmit">
         <div class="form-group">
             <label for="author">Radio Number:</label>
-            <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="assign.radionumber">
+            <input type="text" name="author" class="form-control" id="author" placeholder="#" v-model="recordDetails.radionumber">
         </div>
         <div class="form-group">
             <label for="year">Certification ID:</label>
-            <input type="text" name="year" class="form-control" id="year" placeholder= "#" v-model="assign.certid">
+            <input type="text" name="year" class="form-control" id="year" placeholder= "#" v-model="recordDetails.certid">
         </div>
         <div class="form-group">
             <label for="publisher">Status:</label>
-            <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Status?" v-model="assign.status">
+            <input type="text" name="publisher" class="form-control" id="publisher" placeholder = "Status?" v-model="recordDetails.status">
         </div>
 
 
