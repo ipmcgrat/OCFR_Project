@@ -7,16 +7,14 @@ $db = DbConnection::getConnection();
 
 // Step 2: Create & run the query
 $stmt = $db->prepare(
-  'UPDATE Staff
-   SET firstname = ?, lastname = ?, station = ?, phone = ?, email = ? WHERE radionumber=?');
+  'UPDATE Certifications
+   SET certname = ?, agency = ?, expyears = ? WHERE certid=?');
 
 $stmt->execute([
-  $_POST['firstname'],
-  $_POST['lastname'],
-  $_POST['station'],
-  $_POST['phone'],
-  $_POST['email'],
-  $_POST['radionumber']
+  $_POST['certname'],
+  $_POST['agency'],
+  $_POST['expyears'],
+  $_POST['certid']
 ]);
 
 

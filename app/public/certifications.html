@@ -40,7 +40,7 @@
 <h2><strong><center>OCFR Certifications</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <div id="certsRecordsApp">
-<table class="table table-condensed"><br>
+<table class="table table-condensed table-hover"><br>
 <thead>
         <tr>
             <th class="text-center">Certification ID</th>
@@ -48,21 +48,21 @@
             <th class="text-center">Certifying Agency</th>
             <th class="text-center">Default Exp. Period</th>
             <th class="text-center">Actions</th>
-	    <!--<th class="text-center">Actions</th>-->
         </tr>
 </thead>
     <tbody>
-            <tr v-for="c in certifications" @click="handleRowClick(p)">
+            <tr v-for="c in certifications" @click="handleRowClick(c)">
                     <td>{{ c.certid }}</td>
                     <td>{{ c.certname }}</td>
                     <td>{{ c.agency }}</td>
                     <td>{{ c.expyears }}</td>
-                    <!--<td><button type="button" class="btn btn-primary btn-sm">Update</button>-->
                     <td><form><input type='button' value='Delete' @click='handleDelete(c.certid)'></input></form></td>
             </tr>
     </tbody>
 </table>
 <br>
+<div class=row>
+<div class=col-md-6>
 <h2><strong><center>Add Certification</center></strong></h2>
 <div class="container-fluid text-center bg-2">
 <br>
@@ -88,6 +88,39 @@
             <center><input type="submit"value ="Add Certification" class="btn btn-danger">
             </center><br>
         </form>
+</div>
+</div>
+<div class=col-md-6>
+<h2><strong><center>Edit Certification</center></strong></h2>
+<div class="container-fluid text-center bg-2">
+<br>
+
+<form @submit.prevent="handleEdit">
+  <div class="form-group">
+      <label for="title">Certification ID:</label>
+      <input type="text" class="form-control" name="id" id="title" placeholder="Name" v-model="editCert.certid">
+  </div>
+        <div class="form-group">
+            <label for="title">Certification Name:</label>
+            <input type="text" class="form-control" name="title" id="title" placeholder="Name" v-model="editCert.certname">
+        </div>
+
+        <div class="form-group">
+            <label for="author">Certifying Agency:</label>
+            <input type="text" name="author" class="form-control" id="author" placeholder="Agency" v-model="editCert.agency">
+        </div>
+
+        <div class="form-group">
+            <label for="year">Expiration Duration:</label>
+            <input type="number" name="year" class="form-control" id="year" placeholder="Years" v-model="editCert.expyears">
+        </div>
+
+            <br>
+            <center><input type="submit"value ="Update Certification" class="btn btn-danger">
+            </center><br>
+        </form>
+</div>
+</div>
 </div>
 </div>
 </div>

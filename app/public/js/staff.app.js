@@ -2,8 +2,8 @@ var staffRecordsApp = new Vue({
   el: '#staffRecordsApp',
   data: {
     staff: [],
+    editstaff: {},
     recordStaff: {},
-    editStaff: {},
     filter: {
       lname:''
     },
@@ -31,8 +31,22 @@ var staffRecordsApp = new Vue({
       .catch( err => {
         console.error('RECORD POST ERROR:');
         console.error(err);
-      });
+      })
+      this.fetchStaff();
+      this.handleReset();
+    },
 
+    handleEdit(event) {
+      fetch('api/records/editstaff.php', {
+        method: 'POST',
+        body: JSON.stringify(this.editstaff),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8"
+        }
+      })
+      this.fetchStaff();
+
+      this.handleReset();
     },
 
     handleReset() {
@@ -63,24 +77,14 @@ var staffRecordsApp = new Vue({
           console.error('STAFF DELETE ERROR: ');
           console.error(err);
         });
+
+        this.handleReset();
 },
 
-    handleUpdate(sid) {
-      fetch('api/records/editstaff.php', {
-        method: 'POST',
-        body: JSON.stringify({"radionumber":sid}),
-        headers: {
-          "Content-Type": "application/json; charset=utf-8"
-        }
-      });
-
-  },
-
-handleRowClick(staff){
-  staffRecordsApp.staff = staff;
-  console.log(staff);
-
+handleRowClick(editstaff){
+  staffRecordsApp.editstaff = editstaff;
 }
+
   }, // end methods
   created() {
     this.handleReset();
