@@ -41,11 +41,16 @@
 
 <div class="container-fluid text-center bg-2">
 <div id="certDetailApp">
-  <div>
+
+  <div class="filter1">
 <select v-model="filter1.cname">
-  <option v-for="d in details" :value="filter1.cname">{{d.certname}}</option>
+  <option value="">(all)</option>
+  <option>Firefigher I</option>
+  <option>CPR for Healthcare Providers</option>
   </select>
 </div>
+
+
 
 <table class="table table-condensed"><br>
 <thead>
